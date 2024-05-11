@@ -1,12 +1,36 @@
 {
-  "name": "lib",
+  "name": "@imrandil/concurrent-promise-batcher",
   "version": "1.0.0",
-  "description": "",
+  "description": "A utility for executing asynchronous tasks concurrently in batches, providing better control over resource usage and improved performance.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "keywords": [
+    "concurrent",
+    "promise",
+    "batch",
+    "asynchronous",
+    "performance",
+    "resource",
+    "util",
+    "nodejs"
+  ],
+  "author": "Ali Imran Adil",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMRANDIL/concurrent_promise_batcher_npm_package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IMRANDIL/concurrent_promise_batcher_npm_package/issues"
+  },
+  "homepage": "https://github.com/IMRANDIL/concurrent_promise_batcher_npm_package",
+  "devDependencies": {
+    "mocha": "^9.1.0"
+  }
 }
