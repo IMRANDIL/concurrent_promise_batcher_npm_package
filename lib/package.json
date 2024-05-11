@@ -1,6 +1,6 @@
 {
   "name": "@imrandil/concurrent-promise-batcher",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A utility for executing asynchronous tasks concurrently in batches, providing better control over resource usage and improved performance.",
   "main": "index.js",
   "directories": {
