@@ -11,7 +11,7 @@ npm install @imrandil/concurrent-promise-batcher
 ## Usage
 
 ```javascript
-const concurrentPromise = require('concurrent-promise-batcher');
+const concurrentPromise = require('@imrandil/concurrent-promise-batcher');
 
 // Define a function to execute for each item in the batch
 async function fetchData(item) {
