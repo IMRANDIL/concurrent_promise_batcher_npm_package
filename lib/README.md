@@ -5,7 +5,7 @@ Concurrent Promise Batcher is a Node.js utility for executing asynchronous tasks
 ## Installation
 
 ```bash
-npm install concurrent-promise-batcher
+npm install @imrandil/concurrent-promise-batcher
 ```
 
 ## Usage
