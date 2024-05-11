@@ -38,6 +38,43 @@ concurrentPromise(batchConcurrency, batches, fetchData)
     });
 ```
 
+### One of the use cases ->
+
+```javascript
+const concurrentPromise = require('@imrandil/concurrent-promise-batcher');
+
+// Function to fetch data from an API
+async function fetchDataFromAPI(url) {
+    const response = await fetch(url);
+    return response.json();
+}
+
+// Array of API endpoints
+const apiEndpoints = [
+    'https://hotels4.p.rapidapi.com/v2/get-meta-data',
+    'https://api.publicapis.org/entries',
+    'https://api.coindesk.com/v1/bpi/currentprice.json',
+    'https://www.boredapi.com/api/activity',
+    'https://dog.ceo/api/breeds/image/random'
+];
+
+// Define the maximum concurrency level
+const maxConcurrency = 3; // For example, fetching data from 3 APIs concurrently
+
+// Fetch data concurrently from multiple APIs
+concurrentPromise(maxConcurrency, apiEndpoints, fetchDataFromAPI, true)
+    .then(({ results, executionTime, numBatchesProcessed, avgExecutionTimePerBatch }) => {
+        console.log('Results:', results);
+        console.log('Execution time:', executionTime);
+        console.log('Number of batches processed:', numBatchesProcessed);
+        console.log('Average execution time per batch:', avgExecutionTimePerBatch);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+```
+
 ## Parameters
 
 - `batchConcurrency`: The maximum number of concurrent promises to execute. Must be a positive integer.
